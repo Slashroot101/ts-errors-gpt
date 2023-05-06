@@ -50,7 +50,7 @@ async function getOpenAISuggestion(error: string, codeSnippet: string, apiKey: s
       messages: [
         {
           role: 'user',
-          content: `Act as a TypeScript engineer. You received the following error: ${error}. This is the line that it is thrown from: ${lineSnippet}. Here is the surrounding code with the snippet I pasted included: ${codeSnippet}. Explain the error with better detail from the context.`,
+          content: `Act as a TypeScript engineer. You received the following error: ${error}. This is the line that it is thrown from: ${lineSnippet}. Here is the surrounding code with the snippet I pasted included: ${codeSnippet}. Explain the error with better detail from the context, and provide a code example to fix it if you can.`,
         }
       ],
       max_tokens: 1000,
